@@ -1,0 +1,78 @@
+body {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  font-family: 'Arial', sans-serif;
+}
+
+.bg-img {
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  transition: filter 1s ease;
+}
+
+.birthday-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeUp 1.5s ease-in-out forwards;
+  transition: 3s;
+}
+
+.alert-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeUp 1.5s ease-in-out forwards;
+  max-width: 400px;
+}
+
+.card-title {
+  color: #ff6f61;
+  font-size: 2.5em;
+  animation: bounce 1s infinite alternate;
+}
+
+.card-text {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#cuteMessage {
+  opacity: 0;
+}
+
+#alertCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  display: flex;
+  width: 70%;
+  height: 100px;
+}
+
+#alertCard h2 {
+  font-size: 24px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 2em;
+  }
+
+  .card-text {
+    font-size: 1em;
+  }
+}
